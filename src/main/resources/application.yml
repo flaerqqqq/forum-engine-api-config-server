@@ -7,6 +7,19 @@ spring:
         git:
           uri: https://github.com/flaerqqqq/forum-engine-api-config-server.git
           clone-on-start: true
+          repos:
+            default:
+              pattern: 'default'
+              uri: https://github.com/flaerqqqq/forum-engine-api-config-server.git
+              default-label: main
+            dev:
+              pattern: 'dev'
+              uri: https://github.com/flaerqqqq/forum-engine-api-config-server.git
+              default-label: dev
+            main:
+              pattern: 'prod'
+              uri: https://github.com/flaerqqqq/forum-engine-api-config-server.git
+              default-label: main
 
 server:
   port: 8888
