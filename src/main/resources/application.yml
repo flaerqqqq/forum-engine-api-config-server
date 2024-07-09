@@ -6,6 +6,8 @@ spring:
       server:
         git:
           uri: https://github.com/flaerqqqq/forum-engine-api-config-server.git
+          username: ${SPRING_CLOUD_CONFIG_SERVER_GIT_USERNAME} # used environment variables because of sensitive data
+          password: ${SPRING_CLOUD_CONFIG_SERVER_GIT_PASSWORD} # used environment variables because of sensitive data
           clone-on-start: true
           repos:
             default:
