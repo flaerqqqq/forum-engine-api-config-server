@@ -22,6 +22,8 @@ spring:
               pattern: 'prod'
               uri: https://github.com/flaerqqqq/forum-engine-api-config-server.git
               default-label: main
+        native:
+          search-locations: classpath:/configurations
   security:
     user:
       name: confServLogin
