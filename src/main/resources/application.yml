@@ -20,6 +20,10 @@ spring:
               pattern: 'prod'
               uri: https://github.com/flaerqqqq/forum-engine-api-config-server.git
               default-label: main
+  security:
+    user:
+      name: confServLogin
+      password: confServPass
 
 server:
   port: 8888
