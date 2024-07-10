@@ -1,33 +1,30 @@
 spring:
+  profiles:
+    active: git
   application:
     name: config-server
   cloud:
     config:
       server:
         git:
-          uri: https://github.com/flaerqqqq/forum-engine-api-config-server.git
+          uri: https://github.com/flaerqqqq/forum-engine-api-configs.git
           username: ${SPRING_CLOUD_CONFIG_SERVER_GIT_USERNAME} # used environment variables because of sensitive data
           password: ${SPRING_CLOUD_CONFIG_SERVER_GIT_PASSWORD} # used environment variables because of sensitive data
+          skip-ssl-validation: true
           clone-on-start: true
           repos:
             default:
               pattern: 'default'
-              uri: https://github.com/flaerqqqq/forum-engine-api-config-server.git
-              default-label: dev # temporally for development, change to 'main' upon production stage
+              uri: https://github.com/flaerqqqq/forum-engine-api-configs.git
+              default-label: dev # temporarily for development, change to 'main' upon production stage
             dev:
               pattern: 'dev'
-              uri: https://github.com/flaerqqqq/forum-engine-api-config-server.git
+              uri: https://github.com/flaerqqqq/forum-engine-api-configs.git
               default-label: dev
             main:
               pattern: 'prod'
-              uri: https://github.com/flaerqqqq/forum-engine-api-config-server.git
+              uri: https://github.com/flaerqqqq/forum-engine-api-configs.git
               default-label: main
-        native:
-          search-locations: classpath:/configurations
-  security:
-    user:
-      name: confServLogin
-      password: confServPass
 
 server:
   port: 8888
