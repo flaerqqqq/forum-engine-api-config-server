@@ -8,9 +8,8 @@ spring:
       server:
         git:
           uri: https://github.com/flaerqqqq/forum-engine-api-configs.git
-          username: ${SPRING_CLOUD_CONFIG_SERVER_GIT_USERNAME} # used environment variables because of sensitive data
-          password: ${SPRING_CLOUD_CONFIG_SERVER_GIT_PASSWORD} # used environment variables because of sensitive data
-          skip-ssl-validation: true
+          username: flaerqqqq
+          password: ${GITHUB_ACCESS_TOKEN} # used environment variables because of sensitive data
           clone-on-start: true
           refresh-rate: 15
           repos:
