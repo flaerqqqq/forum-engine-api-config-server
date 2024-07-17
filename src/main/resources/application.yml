@@ -25,6 +25,10 @@ spring:
               pattern: 'prod'
               uri: https://github.com/flaerqqqq/forum-engine-api-configs.git
               default-label: main
+            test-containers:
+              pattern: 'test-containers'
+              uri: https://github.com/flaerqqqq/forum-engine-api-configs.git
+              default-label: dev
   security:
     user:
       name: ${SPRING_SECURITY_USER_NAME:test} # used environment variables because of sensitive data
